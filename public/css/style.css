@@ -1,17 +1,141 @@
-body{
-background-color: aqua;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-nav{
-    display: flex;
-    justify-content: center;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-nav ul{
-    
-    list-style: none;
-    display: flex;
-    justify-content:baseline;
-    gap: 5rem;
-
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
 }
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.navbar {
+  background-color: lavenderblush;
+}
+.navbar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4rem;
+}
+.navbar__button {
+  background-color: transparent;
+}
+@media (min-width: 500px) {
+  .navbar__button {
+    display: none;
+  }
+}
+@media (max-width: 499px) {
+  .navbar__collapse {
+    display: none;
+  }
+}
+.navbar__collapse > ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.navbar__collapse--show {
+  display: block;
+  width: 100%;
+}
+.navbar__collapse--show > ul {
+  flex-direction: column;
+  padding: 0;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background-color: rgb(252, 236, 179);
+}
+
+nav {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: baseline;
+  padding: 0;
+  gap: 5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
